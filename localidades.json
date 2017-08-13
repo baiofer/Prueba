@@ -1,0 +1,44 @@
+{
+    "localidades": [
+        {
+            "codigoPostal": "20011",
+            "localidad": "Donostia - San Sebastian",
+            "provincia": "Guipizcoa"
+        },
+        {
+            "codigoPostal": "20301",
+            "localidad": "Irún",
+            "provincia": "Guipizcoa"
+        },
+        {
+            "codigoPostal": "20600",
+            "localidad": "Eibar",
+            "provincia": "Guipizcoa"
+        },
+        {
+            "codigoPostal": "20110",
+            "localidad": "Trintxerpe",
+            "provincia": "Guipizcoa"
+        },
+        {
+            "codigoPostal": "20700",
+            "localidad": "Zumarraga",
+            "provincia": "Guipizcoa"
+        },
+        {
+            "codigoPostal": "48260",
+            "localidad": "Ermua",
+            "provincia": "Bizkaia"
+        },
+        {
+            "codigoPostal": "20160",
+            "localidad": "Lasarte - Oria",
+            "provincia": "Guipizcoa"
+        },
+        {
+            "codigoPostal": "20100",
+            "localidad": "Lezo",
+            "provincia": "Guipizcoa"
+        }
+    ]
+}

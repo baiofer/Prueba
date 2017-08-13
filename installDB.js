@@ -8,7 +8,7 @@ const db = require('./lib/connectDB');
 
 //Cargamos las definicones de nuestros modelos
 require('./Models/Esquela');
-//require('./models/Localidad');
+require('./Models/Localidad');
 //require('./models/LibroPesame');
 //require('./models/Condolencia');
 
@@ -31,7 +31,7 @@ db.once('open', () => {
 function runInstallScript() {
     async.series([
         initEsquelas,
-        //initLocalidades,
+        initLocalidades,
         //initLibrosPesame,
         //initCondolencias
     ], (err) => {
@@ -54,6 +54,21 @@ function initEsquelas(cb) {
     Esquela.cargaJson(fichero, (err, numLoaded)=> {
       if (err) return cb(err);
       console.log(`Se han cargado ${numLoaded} esquelas.`);
+      return cb(null, numLoaded);
+    });
+  });
+}
+
+function initLocalidades(cb) {
+  const Localidad = mongoose.model('Localidad');
+  Localidad.remove({}, ()=> {
+    console.log('Localidades borradas.');
+    // Cargar localidades.json
+    const fichero = './localidades.json';
+    console.log('Cargando ' + fichero + '...');
+    Localidad.cargaJson(fichero, (err, numLoaded)=> {
+      if (err) return cb(err);
+      console.log(`Se han cargado ${numLoaded} localidades.`);
       return cb(null, numLoaded);
     });
   });
